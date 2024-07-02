@@ -5,10 +5,13 @@ const router=express.Router();
 const cors=require('cors')
 const bodyparser=require('body-parser')
 const {MongoClient}=require("mongodb");
-const uri="mongodb://127.0.0.1";
+const uri="mongodb://root:example@mongo:27017/"; 
 const client=new MongoClient(uri);
 app.use(bodyparser.json())
 app.use(cors())
+
+
+
 
 
 app.listen(5000,()=>{
